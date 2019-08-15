@@ -1,0 +1,16 @@
+{{#each items}}
+<div class="card card-body mb-2">
+  <h1>Item: {{item}}</h1>
+  <h1>Barcode: {{bcode}}</h1>
+
+
+  <a class="btn btn-dark btn-block mb-2" href="/log/edit/{{id}}">Edit</a>
+  <form action="/log/{{id}}?_method=DELETE" method="post">
+   <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" class="btn btn-danger btn-block" value="Delete">
+  </form>
+
+</div>
+{{else}}
+<p>No idea listed</p>
+{{/each}}

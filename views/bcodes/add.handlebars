@@ -1,0 +1,14 @@
+{{#each errors}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+<div class="card card-body">
+  <h3>Barcode file</h3>
+  <form action="/bcodes" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <input type="file" name="sampleFile" class="btn btn-secondary form-control mb-2" multiple="true" required> 
+      <input type="submit" value="upload"  class="btn btn-primary" >
+    </div>   
+  </form>
+</div>
